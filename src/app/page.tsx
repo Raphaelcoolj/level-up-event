@@ -142,6 +142,12 @@ export default async function Home() {
             <div className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center overflow-hidden shadow-md">
               <Image src="/partner3.jpg" alt="Partner 3" width={96} height={96} className="object-cover" />
             </div>
+            
+            {/* Indicator for additional partners */}
+            <div className="w-20 h-20 md:w-24 md:h-24 bg-slate-800/40 rounded-full flex flex-col items-center justify-center border-2 border-dashed border-slate-600 shadow-sm backdrop-blur-sm group hover:border-accent hover:bg-slate-800/60 transition-all">
+              <span className="text-xl font-black text-slate-400 group-hover:text-accent transition-colors">+</span>
+              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider group-hover:text-slate-300 transition-colors">More</span>
+            </div>
           </div>
         </div>
 
