@@ -37,13 +37,13 @@ export async function getEventDateAction() {
     await connectDB();
     const settings = await EventSettings.findOne();
     if (!settings) {
-      const defaultSettings = await EventSettings.create({ date: "Wed. 17th June, 2026" });
+      const defaultSettings = await EventSettings.create({ date: "SAT 20TH, June 2026" });
       return defaultSettings.date;
     }
     return settings.date;
   } catch (error) {
     console.error("Failed to connect to database for event date:", error);
-    return "Wed. 17th June, 2026"; // Fallback date if DB connection fails
+    return "SAT 20TH, June 2026"; // Fallback date if DB connection fails
   }
 }
 

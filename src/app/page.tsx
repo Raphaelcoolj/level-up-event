@@ -103,7 +103,7 @@ export default async function Home() {
                 </div>
                 <div>
                   <p className="text-sm text-white/70 font-medium uppercase tracking-wider">Venue</p>
-                  <p className="text-lg font-bold">Iyayi Hall, Uniben</p>
+                  <p className="text-lg font-bold">P2 Statistics Building, UNIBEN</p>
                 </div>
               </div>
             </div>
@@ -132,11 +132,16 @@ export default async function Home() {
         {/* Partners Section */}
         <div className="mt-24 pt-12 border-t border-slate-800 text-center animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
           <p className="text-sm font-bold tracking-widest text-slate-500 uppercase mb-8">In Partnership With</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 hover:opacity-100 transition-opacity">
-            {/* Placeholders for partner logos */}
-            <div className="w-32 h-12 bg-slate-800 rounded animate-pulse"></div>
-            <div className="w-24 h-24 bg-slate-800 rounded-full animate-pulse"></div>
-            <div className="text-xl font-bold text-slate-500">Other Prestigious Guests</div>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-80 hover:opacity-100 transition-opacity">
+            <div className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center overflow-hidden shadow-md">
+              <Image src="/partner1.jpg" alt="Partner 1" width={96} height={96} className="object-cover" />
+            </div>
+            <div className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center overflow-hidden shadow-md">
+              <Image src="/partner2.jpg" alt="Partner 2" width={96} height={96} className="object-cover" />
+            </div>
+            <div className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center overflow-hidden shadow-md">
+              <Image src="/partner3.jpg" alt="Partner 3" width={96} height={96} className="object-cover" />
+            </div>
           </div>
         </div>
 
