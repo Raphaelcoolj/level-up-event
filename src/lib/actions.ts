@@ -95,3 +95,23 @@ export async function adminLogoutAction() {
   cookieStore.delete("admin_token");
   revalidatePath("/admin");
 }
+
+export async function toggleAttendanceAction(id: string, isPresent: boolean) {
+  const cookieStore = await cookies();
+  const token = cookieStore.get("admin_token");
+  
+  if (token?.value !== "statsadmin_authenticated") {
+    return { success: false, message: "Unauthorized." };
+  }
+
+  try {
+    await connectDB();
+    await Registration.findByIdAndUpdate(id, { isPresent });
+    revalidatePath("/admin");
+    return { success: true, message: `Attendance updated.` };
+  } catch (error) {
+    console.error("Failed to update attendance:", error);
+    return { success: false, message: "Failed to update attendance." };
+  }
+}
+

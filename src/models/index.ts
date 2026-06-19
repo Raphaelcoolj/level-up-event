@@ -4,6 +4,7 @@ const RegistrationSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   jobTitle: { type: String, required: true },
+  isPresent: { type: Boolean, default: false },
 }, { timestamps: true });
 
 export const Registration = mongoose.models.Registration || mongoose.model("Registration", RegistrationSchema);
